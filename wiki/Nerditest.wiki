@@ -1,0 +1,16 @@
+Nerditest is a simple project used in GTUG and other events as a way to introduce Google technologies, engage audience, and encore socialization and collaboration among them.
+
+Nerditest stands for Nerdity Test, which is a test that evaluate user for nerdity. [http://www.armory.com/tests/nerd500.html here] is a sample of such test. The system will use a sub group of these questions in building an Android application, and then we will ask the audience to submit their answers.
+
+The server will receive a code representing each user, user name and the answer for the question. For each
+
+ * User will first send his/her name and the team name. 
+ * Server will add the user to the list of teams after verifications
+ * User will answer the questions, once a time, sending the result each time.
+ * Server will add the result to the team result and will send it to the GWT client, which will show the results for each team on a big screen.
+ * Upon sending the final result, the server will send back to the user his mark
+ * Final result will show which team are considered the nerds
+
+=Grading=
+ * Submitting the name and the team name indicate that the user wrote and built the application (5 marks)
+ * For each correct answer, user will be given 1.5, total (15 marks)
