@@ -1,4 +1,4 @@
-The project have three main parts, and the organizers can chose which part to built. For the first event, we are going to built the Andoid client, while preparing and deploying the server and the GWT in advance.
+The project have three main parts, and the organizers can choose which part to build. For the first event, we are going to build only the andoid client, while preparing and deploying the server and the GWT in advance.
 
 = Server Side =
 
