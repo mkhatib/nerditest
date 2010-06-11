@@ -1,7 +1,7 @@
 = Team = 
 
 Teams are formed prior the event with the following in mind
- * Each team must include variety of people, 5-10, mixed between industry experts, professionals, students and other members.
+ * Each team will have 5 to 10 members, varying from industry experts, professionals, students and others.
  * Each team will be assigned a binary prefix name: mega, giga, tera, peta, exa, zetta, yotta, xona, weka, vunda, uda, treda, sorta, rinta, quexa, pepta, ocha, nena, minga, luma.
  * Team members should meet and talk, and most importantly should work together.
 
