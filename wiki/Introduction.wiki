@@ -1,0 +1,51 @@
+#labels Featured
+= Introduction =
+
+Nerditest stands for Nerdity Test. It is basically a software application that uses Google technologies (GWT, AE4J, Android).
+
+Nerditest will be used in GTUG Palestine first event scheduled on June 21, 2010, with the following goals in mind
+
+* Introduce Google technologies to attendance in an interactive manner
+* Promote the culture of creativity and entrepreneurship. Showing Google technologies and what developers can do with them: zero setup cost to start a service or to build an application.
+* Social exercise. Attendance will work in teams to build and then use the application. This will determined also the winner team. Teams should be formed up on registering for the event, mixing together industry experts and professional along with students and professors. 
+
+Nerditest uses eclipse for the development, and it containes two sub projects
+ * NerditestWebProject, an java AppEngine project for the application logic with the GWT front end (client)
+Web project src: [http://nerditest.googlecode.com/svn/trunk/NerditestWebProject/ http://nerditest.googlecode.com/svn/trunk/NerditestWebProject/]
+ * NerditestAndroid, which is the Android client.
+Eclipse project src: [http://nerditest.googlecode.com/svn/trunk/NerditestAndroid/ http://nerditest.googlecode.com/svn/trunk/NerditestAndroid/]
+= Exercise Details =
+
+== Introduction ==
+The goal behind this exercise is to
+
+ * Encourage attendees to collaborate and socialize.
+ * Get them engaged in an interactive and competitive hands on during the event
+ * Introduce Google technologies
+ * Show how Google can help and promote entrepreneurship
+
+The application comprise of a list of Nerdity Test questions that the attendees should answer using their Android simulation client. Results will be sent to the server once at a time affecting an overall GWT client showing the accumulative results for each team. 
+
+== Teams == 
+Attendees are grouped into teams using the greek letters: mega, giga, tera, peta, exa, zetta, yotta, xona, weka, vunda, uda, treda, sorta, rinta, quexa, pepta, ocha, nena, minga, luma. 
+
+Team members should search for each others, talk, collaborate and then finally work together in the hands on session.
+
+Team should be carefully selected and formed by the registration committee, try to bring in each team students, professionals and industry experts if possible. It is recommended that each team also include an active GTUG member if not one of the organizers with some deep knowledge in Google technologies. The active members will try to bring the team together and to socialize more.
+
+== Hands on Session == 
+
+The hands on session starts with some introduction about the value of the cloud and mobile development.
+
+== Nerditest Components ==
+
+=== Server Side and GWT ===
+
+Built on the Google AppEngine. 
+
+=== GWT === 
+
+
+=== Android ===
+
+ 
