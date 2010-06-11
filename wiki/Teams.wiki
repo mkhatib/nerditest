@@ -2,7 +2,7 @@
 
 Teams are formed prior the event with the following in mind
  * Each team must include variety of people, 5-10, mixed between industry experts, professionals, students and other members.
- * Each team must have a name using greek letters: mega, giga, tera, peta, exa, zetta, yotta, xona, weka, vunda, uda, treda, sorta, rinta, quexa, pepta, ocha, nena, minga, luma.
- * Team member should meet and talk, and most importantly should work together.
+ * Each team will be assigned a binary prefix name: mega, giga, tera, peta, exa, zetta, yotta, xona, weka, vunda, uda, treda, sorta, rinta, quexa, pepta, ocha, nena, minga, luma.
+ * Team members should meet and talk, and most importantly should work together.
 
 = Grading = 
