@@ -7,9 +7,8 @@ Nerditest will be used in GTUG Palestine first event scheduled on June 21, 2010,
 
   * Introduce Google technologies to attendance in an interactive manner.
 Promote the culture of creativity and entrepreneurship.
-
-Showing Google technologies and what developers can do with them: zero setup cost to start a service or build an application.
-Social exercise. The attendees will work in teams to build and then use the application. This will determined also the winner team. Teams should be formed up on registering for the event, mixing together industry experts and professional along with students and professors. 
+  * Present Google technologies and what developers can do with them: zero setup cost to start a service or build an application.
+  * Social exercise. The attendees will work in teams to build and then use the application. This will also determine the winner team. Teams should be formed upon registering for the event, mixing together industry experts and professionals along with students and professors. 
 
 Nerditest uses eclipse for the development, and it containes two sub projects
 NerditestWebProject, an java AppEngine project for the application logic with the GWT front end (client)
