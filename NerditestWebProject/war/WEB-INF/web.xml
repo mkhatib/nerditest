@@ -4,21 +4,36 @@
     "http://java.sun.com/dtd/web-app_2_3.dtd">
 
 <web-app>
-  
-  <!-- Servlets -->
-  <servlet>
-    <servlet-name>greetServlet</servlet-name>
-    <servlet-class>org.nerditest.server.GreetingServiceImpl</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-    <servlet-name>greetServlet</servlet-name>
-    <url-pattern>/nerditestwebproject/greet</url-pattern>
-  </servlet-mapping>
-  
-  <!-- Default page to serve -->
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>nerditestServlet</servlet-name>
+		<servlet-class>org.nerditest.server.ServerServiceImpl</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>answerServlet</servlet-name>
+		<servlet-class>org.nerditest.server.AnswerServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>questionServlet</servlet-name>
+		<servlet-class>org.nerditest.server.QuestionServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>nerditestServlet</servlet-name>
+		<url-pattern>/nerditestwebproject/nerditest</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>answerServlet</servlet-name>
+		<url-pattern>/answer/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>questionServlet</servlet-name>
+		<url-pattern>/questions</url-pattern>
+	</servlet-mapping>	
+	
+	<!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>NerditestWebProject.html</welcome-file>
   </welcome-file-list>
-
 </web-app>
