@@ -12,6 +12,7 @@ public interface AnswerSvcAsync {
 	void saveNewQuestion(Question question, AsyncCallback<Void> callback);
 	void getAllQuestions(AsyncCallback<List<Question>> callback);
 	void deleteAllQuestions(AsyncCallback<Void> callback);
-	void getGroupsResults(AsyncCallback<List<Answer>> callback);
+	void getGroupsResults(String [] teams, AsyncCallback<List<TeamResult>> callback);
+	void deleteAllAnswers(AsyncCallback<Void> asyncCallback);
 
 }
