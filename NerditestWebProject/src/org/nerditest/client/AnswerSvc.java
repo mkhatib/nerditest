@@ -14,6 +14,7 @@ public interface AnswerSvc extends RemoteService {
 	public void saveNewQuestion(Question question) throws AnswerSvcException;
 	public List<Question> getAllQuestions() throws AnswerSvcException;
 	public void deleteAllQuestions() throws AnswerSvcException;
-	public List<Answer> getGroupsResults();
+	public List<TeamResult> getGroupsResults(String [] teams) throws AnswerSvcException;
+	public void deleteAllAnswers() throws AnswerSvcException;
 	
 }

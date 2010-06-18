@@ -69,17 +69,17 @@ public class AnswerMgr {
 
 	public void saveNewQuestion(Question question) {
 		service.saveNewQuestion(question, new AsyncCallback<Void>() {
-			
+
 			@Override
 			public void onSuccess(Void result) {
 				Window.alert("Succeeded");
-				
+
 			}
-			
+
 			@Override
 			public void onFailure(Throwable caught) {
 				Window.alert("Failed");
-				
+
 			}
 		});		
 	}
@@ -112,34 +112,53 @@ public class AnswerMgr {
 
 	public void deleteAllQuestions() {
 		service.deleteAllQuestions(new AsyncCallback<Void>() {
-			
+
 			@Override
 			public void onSuccess(Void result) {
 				Window.alert("Succeeded");
-				
+
 			}
-			
+
 			@Override
 			public void onFailure(Throwable caught) {
 				Window.alert("Failed");
-				
+
 			}
 		});		
 	}
 
 
-	public void getGroupsResults() {
-		service.getGroupsResults(new AsyncCallback<List<Answer>>() {
-			
+	public void getGroupsResults(String [] teams) {
+		service.getGroupsResults(teams, new AsyncCallback<List<TeamResult>>() {
+
 			@Override
-			public void onSuccess(List<Answer> result) {
+			public void onSuccess(List<TeamResult> result) {
 				//handle the graphs here
 			}
-			
+
 			@Override
 			public void onFailure(Throwable caught) {
 				Window.alert("Failed");				
 			}
 		});
+	}
+
+
+	public void deleteAllAnswers() {
+		service.deleteAllAnswers(new AsyncCallback<Void>() {
+
+			@Override
+			public void onSuccess(Void result) {
+				Window.alert("Succeeded");
+
+			}
+
+			@Override
+			public void onFailure(Throwable caught) {
+				Window.alert("Failed");
+
+			}
+		});	
+
 	}
 }
