@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Nerditest</string>
+    <string name="question_page_name">Questions</string>
+    <string name="result_page_name">Questions</string>
+    <string name="app_title">Nerdity Test</string>
+    <string name="email_field_hint">Email</string>
+    <string name="team_field_hint">Team</string>
+    <string name="start_button_label">Start Test</string>
+    <string name="checkin_button_label">Check in</string>
+    <string name="next_button_label">Next</string>
+    <string name="yes_button_label">Yes!</string>
+    <string name="no_button_label">No!</string>
+    
+    <string name="question_number">Question 1</string>
+    <string name="question_body">Question 1 Body</string>
+
+    
+</resources>

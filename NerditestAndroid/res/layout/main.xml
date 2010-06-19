@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    
+    <!-- This will be deleted -->
+    <TextView
+      android:text="Hello, Androidees!"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:textSize="50px"
+      android:textColor="#ff00ff"
+      android:textStyle="bold"
+      android:gravity="center"
+      />
+    
+    <!-- TextView for title -->
+
+    <!-- EditText for email -->
+    
+    <!-- Checkin button -->
+
+    <!-- EditText for Team -->
+    
+    <!-- Start Button -->
+    
+</LinearLayout>

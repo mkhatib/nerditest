@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical"
+  >
+  
+  <TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="@string/app_title"
+    android:textSize="26dp"
+    android:gravity="center"
+    android:paddingBottom="5px"
+    />
+
+  <TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="@string/question_number"
+    android:textSize="22dp"
+    android:gravity="center"
+    android:paddingBottom="5px"
+    android:id="@+id/question_number"
+    />
+  
+  <TextView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/question_body"
+    android:gravity="fill"
+    android:textSize="20dp"
+    android:id="@+id/question_body"
+    />
+  
+  <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:paddingTop="10px"
+    >
+    
+    <RadioGroup
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:paddingLeft="20px"
+      android:paddingBottom="20px"
+      android:id="@+id/answers_group">
+      <RadioButton 
+        android:text="Choice 1"
+        android:id="@+id/choice_1"
+        />
+      <RadioButton 
+        android:text="Choice 2"
+        android:id="@+id/choice_2"
+        />
+      <RadioButton 
+        android:text="Choice 3"
+        android:id="@+id/choice_3"
+        />
+      <RadioButton 
+        android:text="Choice 4"
+        android:id="@+id/choice_4"
+        />
+    </RadioGroup>
+
+   <Button
+      android:layout_width="100px"
+      android:layout_height="wrap_content"
+      android:text="@string/next_button_label"
+      android:textSize="20dp"
+      android:onClick="answerQuestion"
+      android:id="@+id/next_button"
+      /> 
+  </LinearLayout>  
+  
+</LinearLayout>
