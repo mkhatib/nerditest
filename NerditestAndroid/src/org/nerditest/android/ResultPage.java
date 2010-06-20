@@ -14,7 +14,6 @@ public class ResultPage extends Activity {
 
 	private TextView percentageLabel;
 	private NerditestAPI api;
-	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.result);

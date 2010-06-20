@@ -22,43 +22,97 @@ public class StartPage extends Activity {
 	protected NerditestAPI api;
 	protected Nerditest app;
 	protected EditText teamField ;
-	protected EditText emailField;
 	protected Button startButton;
+	protected EditText emailField ;
 
 	/** Called when the activity is first created. */
-	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-		
-		// Get the Application context
-		
-		// Create a new API
 
-		// Get the team field, disable it, and sit the hint as Team
-		
-		// Get The startButton, disable it
-		
-		// Set Email Field
-		
+		try{
+			/*	
+		app = (Nerditest) getApplication();
+		api = new NerditestAPI(app);
+
+		teamField = ((EditText)findViewById(R.id.team_field));
+		teamField.setEnabled(false);
+		teamField.setHint("Team");
+
+		startButton = ((Button)findViewById(R.id.start_button));
+		startButton.setEnabled(false);
+
+		emailField = (EditText)findViewById(R.id.email_field);
+			 */
+		} catch (Exception ex) {
+			Toast.makeText(getApplicationContext(), "Something wrong happen! StartPageOnCreate0", Toast.LENGTH_SHORT).show();		
+		}
+
+
 	}
+
+	private Handler handler = new Handler(){
+		public void handleMessage(android.os.Message msg) {
+			try{
+				if(userData == null) {
+
+					waitDialog.dismiss();
+					//Toast.makeText(getApplicationContext(), "Something wrong happen! StartPageHandler userData Null", Toast.LENGTH_SHORT).show();
+					Intent result = new Intent(getApplication(), ResultPage.class);
+					startActivity(result);
+					System.out.println();
+				} else {
+					app.setUserData(userData);
+					app.setTeam(userData.getTeam());
+					Log.i(TAG, "Number of questions are: " + userData.getQuestions().size());
+					teamField.setText(userData.getTeam());
+					teamField.refreshDrawableState();
+					startButton.setEnabled(true);
+					startButton.refreshDrawableState();
+					waitDialog.dismiss();
+				}
+			} catch (Exception ex) {
+				//Toast.makeText(getApplicationContext(), "Something wrong happen! StartPageHandler", Toast.LENGTH_SHORT).show();
+				waitDialog.dismiss();
+				Intent result = new Intent(getApplication(), ResultPage.class);
+				startActivity(result);
+			}
+		};
+	};
 
 	/**
 	 * Get Request to get the team name
-	 * Fill out the team field
+	 * Fillout the team field
 	 * Enable Start Button
 	 */
 	public void checkinUser(View v){
 		try {
-			Log.i(TAG, "checkinUser");
-			
-			// Save the email state and start a waiting dialog 
 
-			// Call the API method to get user data by starting a new thread
-			
+			Log.i(TAG, "checkinUser");
+
+			// Make a GET request
+
+
+			Nerditest app = ((Nerditest)getApplication());
+
+			app.setEmail(emailField.getText().toString());
+
+			waitDialog = ProgressDialog.show(this, "Checking in..." , "Please wait...", true);
+
+			new Thread(){
+				public void run() {
+					userData = api.getUserData();
+					// To send a message handler  
+					handler.sendEmptyMessage(0);
+
+				}}.start();
 		} catch (Exception ex) {
-			// Display an error message using Toast
+			Toast.makeText(getApplicationContext(), "Something wrong happen! checkinUser", Toast.LENGTH_SHORT).show();
 		}
+
+
+
+
 	}
 
 	/**
@@ -66,24 +120,17 @@ public class StartPage extends Activity {
 	 * 
 	 */
 	public void startTest(View v){
-		Log.i(TAG, "startTest");			
-		// Start the QuestionPage activity
+		try {
+
+			Log.i(TAG, "startTest");
+			//waitDialog = ProgressDialog.show(this, "Saving..." , "Please wait...", true);
+
+			Intent question = new Intent(this, QuestionPage.class);
+			startActivity(question);
+		} catch (Exception ex) {
+			Toast.makeText(getApplicationContext(), "User already answered all Questions!", Toast.LENGTH_SHORT).show();
+		}
 	}
-	
-	
-	
-	private Handler handler = new Handler(){
-		public void handleMessage(android.os.Message msg) {
-			waitDialog.dismiss();
-			try{
-				// Check if userData is null or no questions are in userData then you got only results
-				// Redirect the user to the result page
 
-				// Else save the userData and the team state and update team field and enable start button
 
-			} catch (Exception ex) {
-				// Display an error message 
-			}
-		};
-	};
 }
