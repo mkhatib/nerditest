@@ -40,54 +40,45 @@ public class QuestionPage extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.question);
 		try {
-			// Get the Application context
+			// TODO Get the Application context
 			
-			// Create a new API
+			// TODO Create a new API
 
-			// Get User Data
+			// TODO Get User Data
 
-			// Get the first question and store it in currentQuestion
+			// TODO Get the first question and store it in currentQuestion
 			
-			// Load in the first question in the UI. Question #, body and choices and update the GUI
+			// TODO Load in the first question in the UI. Question #, body and choices and update the GUI
 
 			
 		} catch (Exception ex){ 
-			// Display an error message with Toast
+			// TODO Display an error message with Toast
 		}
 	}
 	
 	public void answerQuestion(View v) {
 		try {
-			currentQuestionNumber = app.getCurrentQuestion();
-			// If nothing checked give an alert
-			currentQuestion = app.getUserData().getQuestions().get(currentQuestionNumber);
-			currentAnswer = -1;
-			int selectedId = ((RadioGroup)findViewById(R.id.answers_group)).getCheckedRadioButtonId();
-			switch(selectedId){
-			case R.id.choice_1: currentAnswer = 1; break;
-			case R.id.choice_2: currentAnswer = 2; break;
-			case R.id.choice_3: currentAnswer = 3; break;
-			case R.id.choice_4: currentAnswer = 4; break;
-			default:
-				Log.i(TAG, "No Answer Selected");
-				Toast.makeText(getApplicationContext(), "Please Answer the Question!", Toast.LENGTH_SHORT).show();
-				return;
-			}
+			// TODO Get Current Question State and its number
+			
+			// TODO Check what answer is selected if nothing is selected Toast it up and return
+			
 
-			waitDialog = ProgressDialog.show(this, "Saving..." , "Please wait...", true);
-			new Thread(){
-				@Override
-				public void run() {
-					api.answerQuestion(currentQuestion.getNumber(), currentAnswer);
-					handler.sendEmptyMessage(0);
-				}}.start();
+			// TODO Start a progress dialog to indecate that you're saving the answer 
+
+			/* TODO 
+			 * Start a new thread to send a request for answering question through the API
+			 * Once it is done you should notify questionHasBeenAnswered handler so it can 
+			 * load the next question (if any) and dismiss the progress dialog. If that was 
+			 * The last question, then it would load the result page.
+			 */
+			
 		} catch(Exception ex) {
 			Toast.makeText(getApplicationContext(), "Something wrong happen! answerQuestion", Toast.LENGTH_SHORT).show();
 		}
 	}
 	
 	
-	private Handler handler = new Handler(){
+	private Handler questionHasBeenAnswered = new Handler(){
 		public void handleMessage(android.os.Message msg) {
 			try{
 				if(++currentQuestionNumber < app.getUserData().getQuestions().size()) {
@@ -135,8 +126,8 @@ public class QuestionPage extends Activity {
 						nextButton.refreshDrawableState();
 					}
 				} else {
-					Intent result = new Intent(getApplication(), ResultPage.class);
-					startActivity(result);
+					// TODO Display the ResultPage activity
+					
 				}
 				waitDialog.dismiss();
 			} catch (Exception ex) {
